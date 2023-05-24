@@ -1,22 +1,23 @@
-﻿// Задача 7 HARD по желанию - идет за 2 обязательных Напишите программу, которая принимает на вход целое число любой разрядности 
-// и на выходе показывает третью цифру слева этого числа или говорит,
-//  что такой цифры нет. Через строку решать нельзя.
-// 456111 -> 6
-// 78 -> нет
-// 9146548 -> 4
-// 3 -> нет
+﻿// Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
 
-System.Console.WriteLine("Введите число: ");
-int num = int.Parse(Console.ReadLine());
-int result = 0;
-if (num >= 100)
+// a = 5; b = 7 -> max = 7
+// a = 2 b = 10 -> max = 10
+// a = -9 b = -3 -> max = -3
+
+System.Console.WriteLine("Введите первое число: ");
+int num1 = Convert.ToInt32(System.Console.ReadLine());
+System.Console.WriteLine("Введите второе число: ");
+int num2 = Convert.ToInt32(System.Console.ReadLine());
+
+if (num1 > num2)
 {
-    while (num >= 999)
-    {
-        num = num /10;
-    }
-    result = num % 10;
-    System.Console.WriteLine(result);
+    System.Console.WriteLine(num1 + " больше чем " + num2);
 }
-else
-System.Console.WriteLine("Нет");
+else if (num2 > num1)
+{
+    System.Console.WriteLine(num2 + " больше чем " + num1);
+}
+else if (num1 == num2)
+{
+    System.Console.WriteLine(num1 + " равняется " + num2);
+}
