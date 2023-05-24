@@ -1,32 +1,12 @@
-﻿// Задача 4: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
+﻿// Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
 
-// 2, 3, 7 -> 7
-// 44 5 78 -> 78
-// 22 3 9 -> 22
+// 4 -> да
+// -3 -> нет
+// 7 -> нет
 
-
-System.Console.WriteLine("Введите перовое число: ");
-int num1 = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Введите второе число: ");
-int num2 = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Введите третье число: ");
-int num3 = Convert.ToInt32(Console.ReadLine());
-
-if (num1 > num2)
-{
-    if (num1 > num3)
-    {
-        System.Console.WriteLine(num1 + " максимальное число");
-    }
-}
-else if (num2 > num3)
-{
-    System.Console.WriteLine(num2 + " максимальное число");
-}
-else if (num3 > num2)
-{
-    System.Console.WriteLine(num3 + " максимальное число");
-}
+System.Console.WriteLine("Введите число для проверки: ");
+int num = Convert.ToInt32(Console.ReadLine());
+if (num % 2 == 0)
+System.Console.WriteLine("Да");
 else
-{
-    System.Console.WriteLine("Все числа равны");
+System.Console.WriteLine("Нет");
