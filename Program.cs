@@ -28,5 +28,4 @@ else if (num3 > num2)
     System.Console.WriteLine(num3 + " максимальное число");
 }
 else
-{
     System.Console.WriteLine("Все числа равны");
