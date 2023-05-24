@@ -1,12 +1,11 @@
-﻿// Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+﻿// Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
 
-// 4 -> да
-// -3 -> нет
-// 7 -> нет
+// 5 -> 2, 4
+// 8 -> 2, 4, 6, 8
 
-System.Console.WriteLine("Введите число для проверки: ");
-int num = Convert.ToInt32(Console.ReadLine());
-if (num % 2 == 0)
-System.Console.WriteLine("Да");
-else
-System.Console.WriteLine("Нет");
+System.Console.WriteLine("Введите число: ");
+int num = int.Parse(Console.ReadLine());
+
+for (int i = 1; i <= num; i++)
+    if(i % 2 == 0)
+        System.Console.Write(i + " ");
