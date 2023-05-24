@@ -1,22 +1,32 @@
-﻿// Задача 7 HARD по желанию - идет за 2 обязательных Напишите программу, которая принимает на вход целое число любой разрядности 
-// и на выходе показывает третью цифру слева этого числа или говорит,
-//  что такой цифры нет. Через строку решать нельзя.
-// 456111 -> 6
-// 78 -> нет
-// 9146548 -> 4
-// 3 -> нет
+﻿// Задача 4: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
 
-System.Console.WriteLine("Введите число: ");
-int num = int.Parse(Console.ReadLine());
-int result = 0;
-if (num >= 100)
+// 2, 3, 7 -> 7
+// 44 5 78 -> 78
+// 22 3 9 -> 22
+
+
+System.Console.WriteLine("Введите перовое число: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("Введите второе число: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("Введите третье число: ");
+int num3 = Convert.ToInt32(Console.ReadLine());
+
+if (num1 > num2)
 {
-    while (num >= 999)
+    if (num1 > num3)
     {
-        num = num /10;
+        System.Console.WriteLine(num1 + " максимальное число");
     }
-    result = num % 10;
-    System.Console.WriteLine(result);
+}
+else if (num2 > num3)
+{
+    System.Console.WriteLine(num2 + " максимальное число");
+}
+else if (num3 > num2)
+{
+    System.Console.WriteLine(num3 + " максимальное число");
 }
 else
-System.Console.WriteLine("Нет");
+{
+    System.Console.WriteLine("Все числа равны");
