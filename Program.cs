@@ -11,21 +11,12 @@ System.Console.WriteLine("Введите второе число: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 System.Console.WriteLine("Введите третье число: ");
 int num3 = Convert.ToInt32(Console.ReadLine());
+int max = num1;
 
-if (num1 > num2)
-{
-    if (num1 > num3)
-    {
-        System.Console.WriteLine(num1 + " максимальное число");
-    }
-}
-else if (num2 > num3)
-{
-    System.Console.WriteLine(num2 + " максимальное число");
-}
-else if (num3 > num2)
-{
-    System.Console.WriteLine(num3 + " максимальное число");
-}
-else
-    System.Console.WriteLine("Все числа равны");
+if (max < num2)
+    max = num2;
+
+if (max < num3)
+     max = num3;
+    
+System.Console.WriteLine(max);
